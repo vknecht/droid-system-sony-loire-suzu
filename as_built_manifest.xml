@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="https://github.com/NXPNFCProject/" name="NXP"/>
+  <remote fetch="https://android.googlesource.com/" name="aosp" review="https://android-review.googlesource.com/"/>
+  <remote fetch="https://github.com/mer-hybris/" name="hybris" revision="master"/>
+  <remote fetch="https://github.com/mer-hybris/" name="patches" revision="droid-src-sony-aosp-8.1.0_r52_20190206"/>
+  <remote fetch="https://github.com/sonyxperiadev/" name="sony"/>
+  
+  <default remote="aosp" revision="refs/tags/android-8.1.0_r52" sync-j="4"/>
+  
+  <project name="NXPNFCC_FW" path="vendor/nxp/NXPNFCC_FW" remote="NXP" revision="a0d878573f57e1f55f0e9fc42c21821e36c16d52" upstream="master"/>
+  <project name="android_bionic" path="bionic" remote="patches" revision="03e5ff5bf5f7c03c94a21ef3fcbd60cd849c5f2b" upstream="droid-src-sony-aosp-8.1.0_r52_20190206"/>
+  <project name="android_frameworks_av" path="frameworks/av" remote="patches" revision="bd7c457e9df2571b4825aba6950e70e1e17d74c2" upstream="droid-src-sony-aosp-8.1.0_r52_20190206"/>
+  <project name="android_frameworks_base" path="frameworks/base" remote="patches" revision="2297ccb825dead757827a824cc73a8afe358dc7b" upstream="droid-src-sony-aosp-8.1.0_r52_20190206"/>
+  <project name="android_hardware_qcom_audio" path="hardware/qcom/audio" remote="patches" revision="6799cef121d65bb9a8318ba591d761af2ca4b3cd" upstream="droid-src-sony-aosp-8.1.0_r52_20190206"/>
+  <project name="android_hardware_qcom_bootctrl" path="hardware/qcom/bootctrl" remote="patches" revision="54e4840204e585318f66b6593133103d91e7f003" upstream="droid-src-sony-aosp-8.1.0_r52_20190206"/>
+  <project name="android_hardware_qcom_bt" path="hardware/qcom/bt" remote="patches" revision="2bb225faa0bd66416c007ccd6fc334f05aee84a6" upstream="droid-src-sony-aosp-8.1.0_r52_20190206"/>
+  <project name="android_hardware_qcom_display" path="hardware/qcom/display" remote="patches" revision="a7be416c0d8f383138964a84c9f8668e213b935b" upstream="droid-src-sony-aosp-8.1.0_r52_20190206"/>
+  <project name="android_hardware_qcom_gps" path="hardware/qcom/gps" remote="patches" revision="31fb126c9c30d20036b08c6c1663980a1e6c30f1" upstream="droid-src-sony-aosp-8.1.0_r52_20190206"/>
+  <project name="android_hardware_qcom_media" path="hardware/qcom/media" remote="patches" revision="ce9e3ad83a958bd3bb8c66ef4b0254fb1883d5b0" upstream="droid-src-sony-aosp-8.1.0_r52_20190206"/>
+  <project name="android_system_core" path="system/core" remote="patches" revision="475bed14c837d1192b4401859060e5c276716ce7" upstream="droid-src-sony-aosp-8.1.0_r52_20190206"/>
+  <project name="android_system_nfc" path="system/nfc" remote="patches" revision="d98fb8fdcb1cb55f53560b12c2420979dd00efec" upstream="droid-src-sony-aosp-8.1.0_r52_20190206"/>
+  <project name="android_system_vold" path="system/vold" remote="patches" revision="a351c39be1b5148ad73e8f8e6d56b691366ba5be" upstream="droid-src-sony-aosp-8.1.0_r52_20190206"/>
+  <project name="camera" path="vendor/qcom/opensource/camera" remote="sony" revision="b918437410698035cb1f0fe51e6721ae808de1c5" upstream="aosp/LA.UM.6.4.r1"/>
+  <project name="device-sony-akari" path="device/sony/akari" remote="sony" revision="521cad43e160ffd72f4c08cdafe412c1a42650e4" upstream="o-mr1"/>
+  <project name="device-sony-akatsuki" path="device/sony/akatsuki" remote="sony" revision="1c8a27b35ac69219559d83d61ec1e7adae3fb21e" upstream="o-mr1"/>
+  <project name="device-sony-apollo" path="device/sony/apollo" remote="sony" revision="feb2210169ca22487922af094770000d98aa1e32" upstream="o-mr1"/>
+  <project name="device-sony-blanc" path="device/sony/blanc" remote="sony" revision="c42041ee34bd841eb10930bef179b8b80744b530" upstream="o-mr1"/>
+  <project name="device-sony-common" path="device/sony/common" remote="patches" revision="c8abf76f61c081ef97fd618ffc7c654dfe33e6c3" upstream="droid-src-sony-aosp-8.1.0_r52_20190206"/>
+  <project name="device-sony-common-headers" path="kernel/sony/msm-4.4/common-headers" remote="sony" revision="c7e52e0c6cedf83c15d938688365d0a6b6bbd3fe" upstream="aosp/LA.UM.6.4.r1"/>
+  <project name="device-sony-discovery" path="device/sony/discovery" remote="sony" revision="75f84718e827166e85fa60a04b41886b30a7b053" upstream="o-mr1"/>
+  <project name="device-sony-dora" path="device/sony/dora" remote="sony" revision="a91b3065d7751584f0dbc8018970a0b13382a776" upstream="o-mr1"/>
+  <project name="device-sony-kagura" path="device/sony/kagura" remote="sony" revision="d81d042b6a53f58b7f690e51907be27b079ccb52" upstream="o-mr1"/>
+  <project name="device-sony-keyaki" path="device/sony/keyaki" remote="sony" revision="00dcbdd8f0b8a13e6a83b27f64ff403b72839b95" upstream="o-mr1"/>
+  <project name="device-sony-kugo" path="device/sony/kugo" remote="sony" revision="4364bdd2f297072550ea9a626176ca7ec367ede9" upstream="o-mr1"/>
+  <project name="device-sony-lilac" path="device/sony/lilac" remote="sony" revision="89a5933539d6708ad3034917902fdc8fbf580adc" upstream="o-mr1"/>
+  <project name="device-sony-loire" path="device/sony/loire" remote="sony" revision="8d5c7de27b656ba6085893d5d2992caaad12b342" upstream="o-mr1"/>
+  <project name="device-sony-maple" path="device/sony/maple" remote="sony" revision="b5356bc08b9846e45985c9405e36bd0f81909adf" upstream="o-mr1"/>
+  <project name="device-sony-nile" path="device/sony/nile" remote="patches" revision="e0ec011614231537a8221f2e24a7e3d6f6db4fa9" upstream="droid-src-sony-aosp-8.1.0_r52_20190206"/>
+  <project name="device-sony-pioneer" path="device/sony/pioneer" remote="sony" revision="c300d6712e0016a5b21b6a4909742369d2d49d56" upstream="o-mr1"/>
+  <project name="device-sony-poplar" path="device/sony/poplar" remote="sony" revision="2e694b40dab5b9daca5bd237a6e9535d7b5b945d" upstream="o-mr1"/>
+  <project name="device-sony-sepolicy" path="device/sony/sepolicy" remote="sony" revision="7b80b5c368343f897b50d3935ff4f8dedbcf3ea6" upstream="o-mr1"/>
+  <project name="device-sony-suzu" path="device/sony/suzu" remote="sony" revision="cefb58f43d20ed7b58103c7a521e27b08b195444" upstream="o-mr1"/>
+  <project name="device-sony-tama" path="device/sony/tama" remote="sony" revision="eef23c8e06989cc2915b240f9d0aee3c4a3adb87" upstream="o-mr1"/>
+  <project name="device-sony-tone" path="device/sony/tone" remote="sony" revision="08c6e670c1166de4330c820fa78187d92bbb5a30" upstream="o-mr1"/>
+  <project name="device-sony-voyager" path="device/sony/voyager" remote="sony" revision="9445a04d109cd00be1fa4f0117b7fae5efa3b05c" upstream="o-mr1"/>
+  <project name="device-sony-yoshino" path="device/sony/yoshino" remote="sony" revision="ea27468eb66df04fe2f8eaae5244426d1bed4019" upstream="o-mr1"/>
+  <project name="device/common" revision="f87323bed1150074fee5a0ad64d76aaed0c58f00" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="device/google/atv" revision="0956280428ba979a2a78e852dd484167ece3b9af" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="device/google/contexthub" revision="6c6efc263a0daa6d6a377ea8e129d8bbc7b32675" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="device/google/dragon" revision="e04d0aa39f5af92daf5090e59cfc8777ea768fd1" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="device/google/marlin" revision="1e6bd67223a6adce0795f5ec26a52002e4c103fc" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="device/google/muskie" revision="5f21cad3fc50b7df2c24ea5a50512cf195d912e9" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="device/google/taimen" revision="c9a389f4c7dad326c60c72c007187707a7e3b86b" upstream="refs/tags/android-8.1.0_r52"/>
+  <project clone-depth="1" name="device/google/vrservices" revision="b290ba549b38447937773e3698e4678015550684" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="device/google/wahoo" revision="25e22473e5c306732b4cf142f31b89381f4cfb44" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="device/sample" revision="509608c76570d623c05952c8eecdc2868ca8a952" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="droid-src-sony-nile" path="rpm" remote="hybris" revision="20b8e40c3a1e0da9744e8d83aa1158eb1383d762" upstream="master"/>
+  <project name="hardware-qcom-display" path="hardware/qcom/display/msmfb" remote="sony" revision="f306f78eeb7884e1266078266e170170c23fc1c0" upstream="aosp/LA.UM.6.3.r1"/>
+  <project name="hardware-qcom-display" path="hardware/qcom/display/sde" remote="sony" revision="5b77cd2c88bdeda382f05d7c2005af54cbe87762" upstream="aosp/LA.UM.7.3.r1"/>
+  <project name="hardware-qcom-wlan" path="vendor/qcom/opensource/wlan" remote="sony" revision="6351125ec900f421276213a2a0d336cfc6268042" upstream="master"/>
+  <project name="macaddrsetup" path="vendor/oss/macaddrsetup" remote="sony" revision="d413798801a15dc5633b2beb17852d39e608dc0a" upstream="master"/>
+  <project name="packages-apps-FMRadio" path="packages/apps/FMRadio" remote="sony" revision="680e46c71260e0bbd9517b82a9b7be7902745698" upstream="master"/>
+  <project name="packages_apps_ExtendedSettings" path="packages/apps/ExtendedSettings" remote="sony" revision="546cfb034b416c608add6c561005410f05efd1fe" upstream="o-mr1"/>
+  <project name="platform/art" path="art" revision="7f13ce4d95e2f8e38a82021058025509b7e994df" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/bootable/recovery" path="bootable/recovery" revision="ec958fd4ee7a60bae0f980a78a146402316b0b9f" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/build" path="build/make" revision="6fe7c539d52a0ae9f31f2933516513dcb4c1fd38" upstream="refs/tags/android-8.1.0_r52">
+    <copyfile dest="Makefile" src="core/root.mk"/>
+    <linkfile dest="build/CleanSpec.mk" src="CleanSpec.mk"/>
+    <linkfile dest="build/buildspec.mk.default" src="buildspec.mk.default"/>
+    <linkfile dest="build/core" src="core"/>
+    <linkfile dest="build/envsetup.sh" src="envsetup.sh"/>
+    <linkfile dest="build/target" src="target"/>
+    <linkfile dest="build/tools" src="tools"/>
+  </project>
+  <project name="platform/build/blueprint" path="build/blueprint" revision="a011038d864e3faa528ec1037a568e5824955a0f" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/build/kati" path="build/kati" revision="51f78826f5d431981903ef82c51bdb868438717d" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/build/soong" path="build/soong" revision="3d83ebe1768d676c90e8fa3d508157f4654821e5" upstream="refs/tags/android-8.1.0_r52">
+    <linkfile dest="Android.bp" src="root.bp"/>
+    <linkfile dest="bootstrap.bash" src="bootstrap.bash"/>
+  </project>
+  <project name="platform/compatibility/cdd" path="compatibility/cdd" revision="ca5bd0f77af6feda04b2fccb5318fac8abb86339" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/cts" path="cts" revision="9c24395f6940a5d5c0b5c2256a42f862e4e9f6fb" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/dalvik" path="dalvik" revision="6e80465c91881586e29679409f41d8855ed16b13" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/developers/build" path="developers/build" revision="0fa5cd0b487900e2709108866a65c88a1ba87e3b" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/developers/demos" path="developers/demos" revision="8f2c7a9ff17483445ae35f0221edd3ec6f9e315d" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/developers/samples/android" path="developers/samples/android" revision="b62b5c3ab50cb18e9ead337251164fc134c1f658" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/development" path="development" revision="6e566d4604556326c1669c45bf0a827880215fb6" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/docs/source.android.com" path="docs/source.android.com" revision="f99a8b31cc407b186dedf0d3bc0c73735995e112" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/ImageMagick" path="external/ImageMagick" revision="5691a8ecaba367d04b2c2a13ec1e9e05f4f17b7c" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/Microsoft-GSL" path="external/Microsoft-GSL" revision="c7231a8b061cb44839292cf4de1aa2b8d3fc165f" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/aac" path="external/aac" revision="2be727084133aaf5dc7256993037776a7c3a3e25" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/abi-compliance-checker" path="external/abi-compliance-checker" revision="5453ac991183dc8dc856e8beced059edab94acaf" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/abi-dumper" path="external/abi-dumper" revision="73ee623ee0707f3c741fedf181e19224d0422003" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/android-clat" path="external/android-clat" revision="c38b324ab31ae82cef8fe6d6f5621950b7f007d1" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/androidplot" path="external/androidplot" revision="c66727ebf001607cee14521c35bc852b55fd9845" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/ant-glob" path="external/ant-glob" revision="a73228afa9540b9c5518d360c5ae630bb634f975" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/antlr" path="external/antlr" revision="dd5fa6d48b827c5d98b625adbc209f4a05567534" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/apache-commons-math" path="external/apache-commons-math" revision="18f62fca59d387e3c1ccd8f80087d9c9af40bcc8" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/apache-harmony" path="external/apache-harmony" revision="6f5ec3589aca45d3c7cd914005c49594890bb7b0" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/apache-http" path="external/apache-http" revision="1ceb2520c083757f2dece994b3bd25ede66faac4" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/apache-xml" path="external/apache-xml" revision="31d7642eb8f37a9166db7f1c9e313ab651bdb8ba" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/archive-patcher" path="external/archive-patcher" revision="12aea8c52797a0737cec47ace88c00cf87a1ebfc" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/arm-neon-tests" path="external/arm-neon-tests" revision="104e2a662ec8443e9a7603b22efbb3b86c1e7094" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/autotest" path="external/autotest" revision="3433323919c21c648262f82306fa224e9703f3dd" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/avb" path="external/avb" revision="01d724ab7f418a546aa6951c6f78716caeb8b6ce" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/bart" path="external/bart" revision="232e1a3fdc810f60aedda0e58cd95e47296e0335" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/bison" path="external/bison" revision="7467d52af437dd3dfea237a6865ab84bf258dee0" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/blktrace" path="external/blktrace" revision="d345431f16b8f76f30a58193ff2b26d5853e1109" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/boringssl" path="external/boringssl" revision="d3a4c5684f96eac702d8d34159cf4592d2e18eea" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/bouncycastle" path="external/bouncycastle" revision="c83203534f05d616b55d4a3250be4a486fdd6259" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/brotli" path="external/brotli" revision="49144a2ca89201605b6b053176c3d8a5546deebc" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/bsdiff" path="external/bsdiff" revision="1e1767e6fc54db916faf0020e4379756dcc45b9b" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/bzip2" path="external/bzip2" revision="729aaff62f212a5ddb8960792d4a5dd484517ed7" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/c-ares" path="external/c-ares" revision="9f1b2827cb88c58a80c470a4bddb2485677ec57f" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/caliper" path="external/caliper" revision="4a0d9aba0856d0aa965d5653bfa4c138f0e8a8ba" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/cblas" path="external/cblas" revision="d063db8bdddfcde61e4bad3bfe65941fd73e8094" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/chromium-libpac" path="external/chromium-libpac" revision="4c5c8f376c9e5389b2948f8ed465f87b4ba7f384" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/chromium-trace" path="external/chromium-trace" revision="8b2c0074e71a8086dee98ca8730acfdc5eddf7a1" upstream="refs/tags/android-8.1.0_r52"/>
+  <project clone-depth="1" name="platform/external/chromium-webview" path="external/chromium-webview" revision="3ac458a4513d893241c8fe74535e2be64d6e5efd" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/clang" path="external/clang" revision="751a76679b0fb5798ea6cab75906df07edcab315" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/cmockery" path="external/cmockery" revision="9199c7bfafefea32d1884182fa655b6e4578c1c4" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/compiler-rt" path="external/compiler-rt" revision="0c46c9e892a3f68420635032ef2f6152dabd197c" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/conscrypt" path="external/conscrypt" revision="47b0a77e895ea796135c64aa76c9d5b1bb20d387" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/crcalc" path="external/crcalc" revision="5559610bea3b267abef3273868f2d6b8c01409a5" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/cros/system_api" path="external/cros/system_api" revision="ad8426b3192ec527c2ad6287aeef0e012757e4a0" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/curl" path="external/curl" revision="2bb295a0e3c18ed122c86dfd60fcb15ef814471c" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/dagger2" path="external/dagger2" revision="50daa982cc79418c6b9686d13e447cca1aa6cdea" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/deqp" path="external/deqp" revision="42988f4e78a16bd2f656632967c1d5d2cdfb56f3" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/desugar" path="external/desugar" revision="2aa9e2e0961b71f8312e8b88f26354fa8c83de19" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/devlib" path="external/devlib" revision="0d8ffa979098c9e1bf8eb0f1c76cfbd5df1324cc" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/dexmaker" path="external/dexmaker" revision="e62dfc0cb516ce70d9b8337a81a585da66c6b88e" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/dhcpcd-6.8.2" path="external/dhcpcd-6.8.2" revision="54d1fc2d574d21f788abb64b10c9a6352eba0b65" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/dlmalloc" path="external/dlmalloc" revision="6661f3ca66b55d8f5a57b96fec97efaf8f3897a5" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/dng_sdk" path="external/dng_sdk" revision="9bbc04196faa97b8b7df2ec6b997a7109a8a209c" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/dnsmasq" path="external/dnsmasq" revision="2d1fee713bb65ac71ea60fead3b8d53415e875e7" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/doclava" path="external/doclava" revision="f8c9b6c5dd536c5ad3b995be77f7189ca08ae345" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/donuts" path="external/donuts" revision="005389fb31a67841b5de42f0d25fbfab843e208c" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/drm_hwcomposer" path="external/drm_hwcomposer" revision="a0efb9658f3c3f123e0a342ed174cb2dce6a0746" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/droiddriver" path="external/droiddriver" revision="6a3bdec535b24fc8c1af205a6a2986f881535d2d" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/drrickorang" path="external/drrickorang" revision="23d02aa32f580d03680aa8f0a62afbb4c915e669" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/dtc" path="external/dtc" revision="a7e2c24a2f1df4a73c75f5a84a671c59c1089e63" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/e2fsprogs" path="external/e2fsprogs" revision="210fcdc9cf65c0b7df98b9fc1e0bdaaa6c6cb2ef" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/easymock" path="external/easymock" revision="ae369e1738f81cbcf6118adac03ec0e8bcbb8400" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/eigen" path="external/eigen" revision="364389e897d64ab9abe9d3d027c608e46df354e8" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/elfutils" path="external/elfutils" revision="f1f212563ee672a1eca4238a5cc6ff1e969ec071" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/emma" path="external/emma" revision="deb5711b2635ee9d332605e2e00b63b32bed6777" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/esd" path="external/esd" revision="943c42b6f8e9afe821744aa4c039f4943ebf29f5" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/expat" path="external/expat" revision="b8f484c31a840e919d202af03fa00df92e4fd40f" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/eyes-free" path="external/eyes-free" revision="16bd4c7a4d1bfe229068b637614dad7c48dd2ceb" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/f2fs-tools" path="external/f2fs-tools" revision="db19512390ebdea5cf6fb18ddf1f08619fb5ded2" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/fdlibm" path="external/fdlibm" revision="fcd17254a9e59ceb0420d4a2faf29db6b004c443" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/fec" path="external/fec" revision="1be76f512a85176bf5c59b6b9acf88a38f4895c8" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/fio" path="external/fio" revision="844e05b041d7c9b5617a101ea83ad1d8bd982139" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/flac" path="external/flac" revision="22d1581f2981107bfe2ee8ea9a45e3fccd0db4a2" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/flatbuffers" path="external/flatbuffers" revision="83d6225e9b642ea069023e45a943d3e7f916fb62" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/fmtlib" path="external/fmtlib" revision="f4d6768e2595b881a146e41e275f77203db9bc56" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/fonttools" path="external/fonttools" revision="fede58680958e96e6e8f61c3cc6282f798452c53" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/freetype" path="external/freetype" revision="1397453b0923c953107b70286d2308ce00ab6a72" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/fsck_msdos" path="external/fsck_msdos" revision="4103a4ab7d45b439b4f7297a2129a1ca45ec91dd" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/gemmlowp" path="external/gemmlowp" revision="c42f5705d21dae835388d15dd1106028002e66c6" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/giflib" path="external/giflib" revision="db6d1840bcd6c13cc41456835127d6d7d1b0694c" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/glide" path="external/glide" revision="bb5ad30aaff77d3e7226133b98c434e9f9cc1a45" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/google-api-services-storage" path="external/google-api-services-storage" revision="29b36ffc866ec32ea01f92ab55100f16bb4b2157" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/google-benchmark" path="external/google-benchmark" revision="1df04fb57e1320088dc6529eaa55aee379a1f46c" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/google-breakpad" path="external/google-breakpad" revision="4125ccd15f21dbae3d521d0298ce90f1fbc29bdb" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/google-fonts/carrois-gothic-sc" path="external/google-fonts/carrois-gothic-sc" revision="0062a10458d4c357f3082d66bcb129d11913aaae" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/google-fonts/coming-soon" path="external/google-fonts/coming-soon" revision="2c5cb418c690815545bbb0316eae5fd33b9fc859" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/google-fonts/cutive-mono" path="external/google-fonts/cutive-mono" revision="bce2136662854076023066602526ba299e6556b2" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/google-fonts/dancing-script" path="external/google-fonts/dancing-script" revision="7b6623bd54cee3e48ae8a4f477f616366643cc78" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/google-tv-pairing-protocol" path="external/google-tv-pairing-protocol" revision="c731915e80d9e2ccb755b97e7fdd280bbea07f70" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/googletest" path="external/googletest" revision="f786916e6f2211c6a64d0333897702463cfdf779" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/gptfdisk" path="external/gptfdisk" revision="961666278ec6fa9ea2d61b49454bfbfae13c93e5" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/guava" path="external/guava" revision="96219ea8667672fb9de4908f2ad09329b4cbaabb" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/guice" path="external/guice" revision="2f4c6dfce39d38e64a6e4993a808270e16d7dc1b" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/hamcrest" path="external/hamcrest" revision="2c2a845e1e8fdda704e4f2ccaa335d69d043ebf3" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/harfbuzz_ng" path="external/harfbuzz_ng" revision="87f1c7be2c9003b3591a23206d705b6a62b90ae3" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/hyphenation-patterns" path="external/hyphenation-patterns" revision="1fc4509e0726bc266407c98e260876e29bf2cd89" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/icu" path="external/icu" revision="2025bbb9b83054a957023f2803a0675a2dc75934" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/ims" path="external/ims" revision="129b42af2b04a39da53df8da5031526c9a432cc8" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/iproute2" path="external/iproute2" revision="b6210f9b7f4e7355b04b5298af41f6598876c036" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/ipsec-tools" path="external/ipsec-tools" revision="16477a409310e8daa3ec5c8ecaa7a2f2d471fb93" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/iptables" path="external/iptables" revision="00ddcc82b12d8d54a12f6225996efda199919f23" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/iputils" path="external/iputils" revision="dad856323d1bba2f4518918c27e67c2433d9b9da" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/iw" path="external/iw" revision="63d8bad2a5a8a9b443595762233692c5f6a6d36b" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/jacoco" path="external/jacoco" revision="503a120329864b158ed72a07e21155b18e709c21" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/jarjar" path="external/jarjar" revision="78baf98a5c45dfd99d4d2e6d8a3ad392780219fd" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/javasqlite" path="external/javasqlite" revision="ee41d81872eedc632f42bd231b95bc945690d159" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/javassist" path="external/javassist" revision="f7c4b954072e563b75f6910c25bb689bbf38a3d1" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/jcommander" path="external/jcommander" revision="501341b4efff9c378ac4003899dd064586231550" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/jdiff" path="external/jdiff" revision="56f447cc75526c1e097ce402e79d58d4f187b9af" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/jemalloc" path="external/jemalloc" revision="ff5dd94312668309247d0128b202f810d21c4224" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/jline" path="external/jline" revision="74812032f8d8eddbef387f18c96de9e5c38b8fdb" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/jmdns" path="external/jmdns" revision="0c71647deb7f7835c473fd3dfb45943083e47794" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/jsilver" path="external/jsilver" revision="b9b84920ba47ddf7f15baa01c56b28e3d3f951ea" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/jsmn" path="external/jsmn" revision="dcf45032132d2991929b93fe18de2b5d164bdf11" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/jsoncpp" path="external/jsoncpp" revision="ada32487313a4bf9aa7f6aaa5625f584d713fcfc" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/jsr305" path="external/jsr305" revision="f162f4b5d952208e4b6e0a7b2e1bf01058e429b4" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/jsr330" path="external/jsr330" revision="d15be3f228885ce6ed2098ff2dcbf6c1085d83ba" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/junit" path="external/junit" revision="df26755a810a785f3ebf21b8aaff6769076f035f" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/junit-params" path="external/junit-params" revision="a5a37830bd0da4e070613d48b02815272f0fea14" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/kernel-headers" path="external/kernel-headers" revision="3d5032f6a22aa4c6de0000400379c4ccccbe31bd" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/kmod" path="external/kmod" revision="4082ee0d1ad5ce92c5ea6fdc5ca08e89cdd9801d" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/ksoap2" path="external/ksoap2" revision="9fdc4a6bb2b882bd1d6c822d2ad0c66585d66ba9" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libavc" path="external/libavc" revision="1601af5701dbfa1c979f9b03bcda735379c3006a" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libbackup" path="external/libbackup" revision="a645153b0a97663636bacdc5527c0d304fa79657" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libbrillo" path="external/libbrillo" revision="c3f3f9e302aaefdfc86cef854a2caa6751b436c7" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libcap" path="external/libcap" revision="1d411da723596f52a3110c9974bde9738ad5227b" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libcap-ng" path="external/libcap-ng" revision="835f318b9785a70415980fba96c34ee5c6b7e415" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libchrome" path="external/libchrome" revision="cb67332318a8f00c01c6a3627d84a1b247bd18d9" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libconstrainedcrypto" path="external/libconstrainedcrypto" revision="c9d382f591a818ce0ac4711f90bc358ed584c5bb" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libcups" path="external/libcups" revision="8847d5777808e2c05b63f6837c8ca277cb81451b" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libcxx" path="external/libcxx" revision="86a195a7931405a349ee481a6501a766c08abbc4" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libcxxabi" path="external/libcxxabi" revision="b927dfb990539740df0d6c0b953fdbc20f1b4ba9" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libdaemon" path="external/libdaemon" revision="e2f604066d97431c95856c73d7b9ee46b348d37e" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libdivsufsort" path="external/libdivsufsort" revision="2a896e7033ced391c57ec46c1d772b15417621a4" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libdrm" path="external/libdrm" revision="401cff4afaf7198ea54c086cad6305f987afb940" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libedit" path="external/libedit" revision="67e14dfc833aafa400a3aad8cb329cbaec503445" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libese" path="external/libese" revision="56a64a38e4dbbf228c92d9184169fe152edd157b" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libevent" path="external/libevent" revision="a4c747362f2f0dcc126b7775ecc30a1aada19613" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libexif" path="external/libexif" revision="a64e1fb34d12ef69c9774b351b801681d3466928" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libgsm" path="external/libgsm" revision="5e0e72ca6c6ffc423ea1f755262d413e899c6a89" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libhevc" path="external/libhevc" revision="9f010ee254a9684d4f7b7985d318b72da29bc114" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libjpeg-turbo" path="external/libjpeg-turbo" revision="de7ba7d12d97c737090e55e2458a8b77c7a9e3a6" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libldac" path="external/libldac" revision="b1f61dd0e5639572bcc08b0e281337878bbf1b98" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/liblzf" path="external/liblzf" revision="a88b9629447deabe8697d2f8fd4cc70aa6e1b563" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libmicrohttpd" path="external/libmicrohttpd" revision="1e68f5d827a859ba3b7ab6a70a60247e0b96afa5" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libmojo" path="external/libmojo" revision="03d018abf828e3c2a068ad7bbc8527af6a8c8c2b" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libmpeg2" path="external/libmpeg2" revision="6d7f88a29e2d4b33945457cedba919bf372a7b81" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libmtp" path="external/libmtp" revision="202b04e58aff23d238dc535271cae33b43ade9c2" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libnetfilter_conntrack" path="external/libnetfilter_conntrack" revision="b9e2926f22af91ad4bdd73e51910c8874b2bf8e5" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libnfnetlink" path="external/libnfnetlink" revision="5b4836d279762a35b3f5c6034551ffada9b54f6b" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libnl" path="external/libnl" revision="133d29d98828b32e1568ee8e74287e9bd185c13e" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libogg" path="external/libogg" revision="3011eefea27b7664114f57850923a40bfef15c76" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libopus" path="external/libopus" revision="dd8036b66dc3e7b680e647ed8fdf06417dfbd07b" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libpcap" path="external/libpcap" revision="1a726f66c98d6a685b0b5da383a3a3fa8254f681" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libphonenumber" path="external/libphonenumber" revision="d84b8219fa61329c21dbb50821b9b33dbc79d220" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libpng" path="external/libpng" revision="22d57ccb52b5c14ca07029787c4a4fe1a90857d0" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libtextclassifier" path="external/libtextclassifier" revision="33ddc854db38da91f4a816035de047678c599288" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libunwind" path="external/libunwind" revision="43dd05e3e53131be126af84accbab1c32e0da897" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libunwind_llvm" path="external/libunwind_llvm" revision="a3a975c39cf0610271d65e87e3c031271ce5bbf1" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libusb" path="external/libusb" revision="723eef28307737e21348b124234c18eba2038764" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libusb-compat" path="external/libusb-compat" revision="759481ae400d02fe99488dcdcd653b4f8139a39c" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libvncserver" path="external/libvncserver" revision="ed7c226e0c0c22704da70c2cfe85d8a0043a3ca0" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libvpx" path="external/libvpx" revision="ab5bc8b3cb8b822dbeb25e6df45413cf2a3614a9" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libvterm" path="external/libvterm" revision="4b7ab84bf9ced02fe8debaacd44724fac7a8f51e" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libxml2" path="external/libxml2" revision="15da5a6e0b837a7f0a85d3bc7b8bf1f0c2220a3a" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/libyuv" path="external/libyuv" revision="7ff60119cd2a64f55cda06e499db8ab54470c6e1" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/linux-kselftest" path="external/linux-kselftest" revision="17400d871dfb00cf45c4f011d26a766f607032e0" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/lisa" path="external/lisa" revision="48024e3bdcb39528f69bb897a3aff57347535c7d" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/littlemock" path="external/littlemock" revision="4dd43c74801149ded3e18eaba7d43ff6dfa192c8" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/lld" path="external/lld" revision="26c9bb3b51a7ac4bc45f73d532a03cfd9982043a" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/llvm" path="external/llvm" revision="34b5a43378f01aa63f7606371a1fe9d820fc8108" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/lmfit" path="external/lmfit" revision="cc79822d100938c92bc403706c95f4583af1f60c" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/ltp" path="external/ltp" revision="648a2151e92db4a68d18d9df2901439bbfa8ee77" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/lz4" path="external/lz4" revision="fc82a7a16aee5add0bdbc34613ae085192793fb1" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/lzma" path="external/lzma" revision="2398a1f776e4baab73d714f92bb7af0f93c720b9" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/markdown" path="external/markdown" revision="06a8f8b914d477183f68b84424bce8ff4dae7e84" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/mdnsresponder" path="external/mdnsresponder" revision="e938642cb5713fd39b554c889830670ea4970ee9" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/mesa3d" path="external/mesa3d" revision="e0fda54ed167f97692bc6cb7237a8e3dca15ba08" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/messageformat" path="external/messageformat" revision="7941896999a8a623683b888fd39095f32a7f49b6" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/minijail" path="external/minijail" revision="e3de2eb97fdd3d1366b86cf0c557fd4aa0077e5c" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/mksh" path="external/mksh" revision="56884cc18f4189d91b0bf1b654b68cb8ff6bba6f" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/mmc-utils" path="external/mmc-utils" revision="f105db5bd1934f0c3e5f74bbc9a5aaeac7a6bf2b" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/mockftpserver" path="external/mockftpserver" revision="a98e55fca4d6aa55549f8c2c80034f2d04118cf6" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/mockito" path="external/mockito" revision="c1c96b2f91899660269d7c54bdfe6565e5250f71" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/mockwebserver" path="external/mockwebserver" revision="2440623105409d48ec0a3717bb6f3da711a0f15d" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/modp_b64" path="external/modp_b64" revision="6f11b5c9b4ffb38dc9375f3cf344da4300a2741a" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/mp4parser" path="external/mp4parser" revision="88bd0c6cfa7fcfbbebcc15c2c565f714cb36b065" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/mtpd" path="external/mtpd" revision="cf7afdb28ea47ebe8a6b298a03cf89ba06ca333d" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/nanohttpd" path="external/nanohttpd" revision="c6783c32331b3fe78ffd5077e7f180995d0e268e" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/nanopb-c" path="external/nanopb-c" revision="5b443aa3a07539deffdc426a335c19777955ad0d" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/naver-fonts" path="external/naver-fonts" revision="91e6e9f94d1d769a8f742649674149ba98ce7d45" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/netcat" path="external/netcat" revision="b023a43765b15f0b0fd5b52b7d8021f515c59c23" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/netperf" path="external/netperf" revision="e100a0c4105b94f7044b243287a5da22f5e8e4e7" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/neven" path="external/neven" revision="a7dcc73c802d0792a1c7a884796c03a5c44e4afd" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/nfacct" path="external/nfacct" revision="5df745ccb4ef5356a786bf63e075efd0ccaad333" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/nist-pkits" path="external/nist-pkits" revision="fe530ae2c3d88eb5326151387028507b4949d751" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/nist-sip" path="external/nist-sip" revision="8445067c3b53e5bd56c32f1c4fb688083c4f4005" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/noto-fonts" path="external/noto-fonts" revision="feb0bef577bb793e5ca15289b559fa85d4f0574a" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/oauth" path="external/oauth" revision="49f3624a6d3307b640a012f15b94d04174473501" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/objenesis" path="external/objenesis" revision="73ce7cc738555cfacf3bb6b279e15a5a62b9deb0" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/okhttp" path="external/okhttp" revision="9f223e8af84b968106d0c4bb37f0f06f4bb8dbf4" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/opencv" path="external/opencv" revision="507669d9a3c8adb2b415488783efe10bf9a6b3a3" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/openssh" path="external/openssh" revision="e25a792cd6ccd2e2081db5baca0d23f4bec85b88" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/owasp/sanitizer" path="external/owasp/sanitizer" revision="bbfb25464ff30c5a62dce351d719a8c533afb2a3" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/parameter-framework" path="external/parameter-framework" revision="247231a17211f56a96e6a595a9eedadc06231242" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/pcre" path="external/pcre" revision="3fe64bc73c25a0eb63f880b2ce5d892ebef6da03" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/pdfium" path="external/pdfium" revision="f0b9ecb9c7908309dd0e417088d13e320350922c" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/piex" path="external/piex" revision="3369ad3455117d907eaedc515f9bf2c57ac5bc0b" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/ply" path="external/ply" revision="583d33c593896afeb8486a25fabfcf6e9dc9ca75" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/ppp" path="external/ppp" revision="90da8c8f15db2c82aece6e4085aaf9c116d481f2" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/proguard" path="external/proguard" revision="af893cdc1242e4cfbeeb10e2323f9a689a825177" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/protobuf" path="external/protobuf" revision="7b77cf5e318d2a69ff2dc928225b0f25d7d222dd" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/python/cpython2" path="external/python/cpython2" revision="f6f0581de161b429d9dc01c7c28c5d44b9e7af6b" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/python/cpython3" path="external/python/cpython3" revision="9458f8e38d4fe0d58890c5867485dbbf2d538955" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/r8" path="external/r8" revision="be69fcefad315b2068a9903019108f879ca4db56" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/regex-re2" path="external/regex-re2" revision="79cce43a82abc1bc56c65de07a7df47d54e163a9" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/replicaisland" path="external/replicaisland" revision="a7045ecdaa9260de82ce71b70306c1934561b9e8" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/rmi4utils" path="external/rmi4utils" revision="d45cae258a3d831cd035ccecb3daa763d26346df" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/robolectric" path="external/robolectric" revision="519562f317f2ee1bf27f559595a44be8dab5c6d5" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/roboto-fonts" path="external/roboto-fonts" revision="a40bfa4b73e5e202b2613004b56893e1b2e7c5d4" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/rootdev" path="external/rootdev" revision="3f7cc435321e5f1f538bbf5464c930857bb90d85" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/safe-iop" path="external/safe-iop" revision="cd76f998688d145235de78ecd5b340d0eac9239d" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/scrypt" path="external/scrypt" revision="c5650cf5b036f0ef500cbc08aaabbb2e35919419" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/seccomp-tests" path="external/seccomp-tests" revision="2d6805a0fe1e328d5281116cd39d250c5d29b049" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/selinux" path="external/selinux" revision="90efe04c55f82a7ea166c913405758fd91bc9aa9" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/sfntly" path="external/sfntly" revision="5c0f9b6f883120352ab36637e72f13af0292d107" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/shflags" path="external/shflags" revision="c4876e01829b8cf110ee33267bb1bad1f8ebb51d" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/skia" path="external/skia" revision="0204a6878a7ef62a4fa63ce11f7cc3d12e014959" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/sl4a" path="external/sl4a" revision="e8e51e528629f65f2bb4940ba8afca0278d7d13f" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/slf4j" path="external/slf4j" revision="63b140791fbb0bceabc496bdd29e108d9597b044" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/smali" path="external/smali" revision="77df77eb2635d8dcfb8c15516317582fc9a82e4f" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/snakeyaml" path="external/snakeyaml" revision="c2d7be0abdbdfae49db372518b7d460f5ac02b5f" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/sonic" path="external/sonic" revision="c55984da5ea66d0fe4bd4d23855fe3ecaecdec72" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/sonivox" path="external/sonivox" revision="5dc91f2943236eab4c09850d31dbb25b643cece7" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/speex" path="external/speex" revision="f80fe69cf62e3b47396b41984f4d6df40bfe1c18" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/spirv-llvm" path="external/spirv-llvm" revision="08b0dc5ecc4d6063b27153d2bbf4bc20fccd1162" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/sqlite" path="external/sqlite" revision="cb9eebc3963a1281d6517246e70859779809463f" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/squashfs-tools" path="external/squashfs-tools" revision="8c214c801b59ca22b66a0f5cbb3c61af39311fc3" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/strace" path="external/strace" revision="5b70c8ffac1eddfa08e3e279cbacf88a62b90093" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/stressapptest" path="external/stressapptest" revision="ea469443e9c2cd1fda87188df2b1ffe0e30656b2" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/svox" path="external/svox" revision="720c5e35793a35ec98bc53aa58fd3d3546f3c7b2" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/swiftshader" path="external/swiftshader" revision="b392d040c6be4592b169fa5cccf46ad0a1dcb9ac" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/syslinux" path="external/syslinux" revision="76d05dc695b06c4e987bb8078f78032441e1430c" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/tagsoup" path="external/tagsoup" revision="1302f5f68f0214445e6b7fb188c7759a32e8cf48" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/tcpdump" path="external/tcpdump" revision="4b3f49ed7fd3a40c71a6fc927ccb91b97903581a" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/testng" path="external/testng" revision="2d09ec828c313edd6f9f5021c9b166854d742521" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/timezonepicker-support" path="external/timezonepicker-support" revision="99e91a76fd74bad10266623d67cdb98d011f709e" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/tinyalsa" path="external/tinyalsa" revision="cd8f1bb6db7aa8b58fd25470c9a66a4c351da5e5" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/tinycompress" path="external/tinycompress" revision="99efd7573faf0a1ca07e837dfad013b779d1d655" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/tinyxml" path="external/tinyxml" revision="d4acc191fb8df5d1a2956949d088acc781c1b602" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/tinyxml2" path="external/tinyxml2" revision="9d0bfe82a266d84a731b421427c551bb4c46b4d3" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/toolchain-utils" path="external/toolchain-utils" revision="3690e025de8daaed03c4acb02d2b054e5c4c0dd5" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/toybox" path="external/toybox" revision="f600cd59d034ecfc84c3848fb557db1259bd0c76" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/tpm2" path="external/tpm2" revision="9e3a0bf49d35b38bb325f479faa6acf96516b8df" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/trappy" path="external/trappy" revision="d3ca91dd979b9e89029ae3bfae3f861b0c7bbdc4" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/tremolo" path="external/tremolo" revision="a8a0cba37f5a4aa6ecf25015e621cc97a70d4246" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/unicode" path="external/unicode" revision="1d15b7695581bf8fca39b4486615b014e7b72ce6" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/universal-tween-engine" path="external/universal-tween-engine" revision="efe8193526dea3b430aab4cf6d9a6c3d280ea5d3" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/v4l2_codec2" path="external/v4l2_codec2" revision="5e56adca0fb379ea6486253acf4375dd4c99d4f5" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/v8" path="external/v8" revision="ba88d5408cc7613c584c2f2930a28faf0ca9910e" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/valgrind" path="external/valgrind" revision="51595f3cd618a6a27d6a359507d3379e3f0f9b3c" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/vboot_reference" path="external/vboot_reference" revision="668a371cb0b026e207655e7adea09e7eb40a94e9" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/vixl" path="external/vixl" revision="9f96104a3a3da9344c51c1e8c2a19a330162a892" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/vogar" path="external/vogar" revision="4c37f73c5965a086bd93b0494a765de473f915b3" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/volley" path="external/volley" revision="fd51dba5e6a4bb935fb4357a445848aee24eba11" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/vulkan-validation-layers" path="external/vulkan-validation-layers" revision="ce54fe72dcb23036a825a003a8a98a7d8eb04722" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/walt" path="external/walt" revision="52926e018b1a1dad067d25ba0eb2be8dc15d49fd" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/webp" path="external/webp" revision="c737077efb513cd18b47044c7def726822271db4" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/webrtc" path="external/webrtc" revision="1fc82666196f76c22e310af85d6cf2e7485b9db6" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/wpa_supplicant_8" path="external/wpa_supplicant_8" revision="7325d654278bbc5ed260cb3cf21e929cb79012f0" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/wycheproof" path="external/wycheproof" revision="46d28ac44a242d84d610a294a640266d3b0e033b" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/x264" path="external/x264" revision="7bf0b975cdfd5692a4598ab09e1258abe5ea5fff" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/xmlrpcpp" path="external/xmlrpcpp" revision="c79d4eae757a81270915c2a7cf01c81b8d42785e" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/xmlwriter" path="external/xmlwriter" revision="e95d92246ee35273dde2bee8b00485cc14c12be5" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/xmp_toolkit" path="external/xmp_toolkit" revision="42ea4dc6d1fc2206a7778029070ed9213e3b0fbf" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/xz-embedded" path="external/xz-embedded" revision="5e2e69cfcf62e18fc8a5096701df8540e040f069" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/zlib" path="external/zlib" revision="5ce335946fc078f2273cf7bd7ade9b304d816c58" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/zopfli" path="external/zopfli" revision="069cb023c39358bc0e1b3dc0397b8fcdd84b4d44" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/external/zxing" path="external/zxing" revision="fedf8f2d8099bf7bb85dc3db8699343d56617deb" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/frameworks/compile/libbcc" path="frameworks/compile/libbcc" revision="8d1f0d7f4a9fe6611b2a435993e2642250f8bc9b" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/frameworks/compile/mclinker" path="frameworks/compile/mclinker" revision="821f636d0b881a930cfc284d4d82ae39862d3a3b" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/frameworks/compile/slang" path="frameworks/compile/slang" revision="6a436c154e7942c76a84d937d0df02e575286d81" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/frameworks/data-binding" path="frameworks/data-binding" revision="453acafaded9dac2703cc4c94d2aa4acc95a252f" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/frameworks/ex" path="frameworks/ex" revision="9db2f426e20d172e3cf35a7167eaaa1f5c8821d4" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/frameworks/hardware/interfaces" path="frameworks/hardware/interfaces" revision="89efd37ec3ac957e2190828644c0aa331e604bce" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/frameworks/layoutlib" path="frameworks/layoutlib" revision="af970950be638cf64850a72e0b45d637dafb3f44" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/frameworks/minikin" path="frameworks/minikin" revision="0a3ca408bd81a3cca22f9a1466ec379d09c85dad" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/frameworks/ml" path="frameworks/ml" revision="d1ca7d857759855a2c5a98d63af0404bba549361" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/frameworks/multidex" path="frameworks/multidex" revision="b288c36f55c976dfc1ac47c426b4adf60df4844b" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/frameworks/native" path="frameworks/native" revision="a5c43d50e69846b64615452211537e2677a5368d" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/frameworks/opt/bitmap" path="frameworks/opt/bitmap" revision="a0d4e3108663202564a6833b76770075b8e5b767" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/frameworks/opt/bluetooth" path="frameworks/opt/bluetooth" revision="6dbe3ff8cdcf84bfcf2667300c08f01d938b1c93" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/frameworks/opt/calendar" path="frameworks/opt/calendar" revision="3f01563afad6b3d2f0546a6260ef958a8173deb6" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/frameworks/opt/chips" path="frameworks/opt/chips" revision="7ccb8ba59b168d748edfce5030ab6b01226ef393" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/frameworks/opt/colorpicker" path="frameworks/opt/colorpicker" revision="809d149b09c0a9b29ccede4b3bb1cd2e154047f8" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/frameworks/opt/datetimepicker" path="frameworks/opt/datetimepicker" revision="9cd7d36d8a464a22a94180e0a5da5a1b465f68fd" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/frameworks/opt/inputconnectioncommon" path="frameworks/opt/inputconnectioncommon" revision="3baece9b20fa480da46d860acd7320fd9eee3386" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/frameworks/opt/inputmethodcommon" path="frameworks/opt/inputmethodcommon" revision="990fcb1a6dbb5d1204cc8ec86e4bc3f691f4aeeb" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/frameworks/opt/net/ethernet" path="frameworks/opt/net/ethernet" revision="9bc5192548c437b9ce61b9c32b9beff3ea9f112a" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/frameworks/opt/net/ims" path="frameworks/opt/net/ims" revision="90abd14221f12375b113ea3b40d597f78925eac4" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/frameworks/opt/net/lowpan" path="frameworks/opt/net/lowpan" revision="f5790bd837a502b64cd038393f3ef1bc0ed4c284" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/frameworks/opt/net/voip" path="frameworks/opt/net/voip" revision="78a7feeb2601037bba61aec5f24302896dace6bc" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/frameworks/opt/net/wifi" path="frameworks/opt/net/wifi" revision="2bb42242ccfcf9f3c1a0e89b83fb90b1dd9212f7" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/frameworks/opt/photoviewer" path="frameworks/opt/photoviewer" revision="ba8bc90bcfdd45716b364fd06c895129b0b56a3a" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/frameworks/opt/setupwizard" path="frameworks/opt/setupwizard" revision="4a874487a9edd6263ac7c8985333fea7b70b67f0" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/frameworks/opt/telephony" path="frameworks/opt/telephony" revision="1e5ce4e8a1486fa3395f149d6dca87ab9ecab71b" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/frameworks/opt/timezonepicker" path="frameworks/opt/timezonepicker" revision="3b2bc8b6dddbfd46e1c94e755f9156a53a49a600" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/frameworks/opt/vcard" path="frameworks/opt/vcard" revision="d90a30beaf9c1e3b7a9633bb32a49f26fdb3b1e2" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/frameworks/rs" path="frameworks/rs" revision="c759113b42288ddce68765a04ba20fa5650557e1" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/frameworks/support" path="frameworks/support" revision="70bbb41d2e94ba5dcd1495982d131e71a1fc89e5" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/frameworks/webview" path="frameworks/webview" revision="ce867defdb6a1602a78e5137aed8a7f636d0a3e1" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/frameworks/wilhelm" path="frameworks/wilhelm" revision="d99408039ffddbf2e4a17ac30361a36d652c6ef3" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/hardware/akm" path="hardware/akm" revision="99e8b227cd00678ce863c04ebde0b8d9a6f7df5c" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/hardware/broadcom/libbt" path="hardware/broadcom/libbt" revision="7b8602a3fc26bbad5ee03cd87fd721bdc3e22442" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/hardware/broadcom/wlan" path="hardware/broadcom/wlan" revision="c502e8b61e780cd9e74105ebcd7f2a9e9e9f8079" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/hardware/google/apf" path="hardware/google/apf" revision="dd1877e2d3520cabaff9a9a6ef3437243a9c81be" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/hardware/google/easel" path="hardware/google/easel" revision="a014dce850636c7a265bcdf7edefb98550df2c54" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/hardware/interfaces" path="hardware/interfaces" revision="9621fa2188a7e34a69b8e86d820f782788232cff" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/hardware/invensense" path="hardware/invensense" revision="11e5ff75af866f91622b6008fa13db1c3685ae69" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/hardware/libhardware" path="hardware/libhardware" revision="12dd5a3dc35bb6ae7dd8ee29f91b34e90034453b" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/hardware/libhardware_legacy" path="hardware/libhardware_legacy" revision="7e46cfffd8c8db9547b4717b8408dd9b0cb83f29" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/hardware/qcom/data/ipacfg-mgr" path="hardware/qcom/data/ipacfg-mgr" revision="da0af80f9a1eba30270e58efeac9481c4dabdc46" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/hardware/qcom/keymaster" path="hardware/qcom/keymaster" revision="b9d7a35c05cac901a65d09849f90f1b4146d10e8" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/hardware/qcom/power" path="hardware/qcom/power" revision="3a098ee1f89c398b9d6e7b5dfae9c694994f8bc4" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/hardware/qcom/wlan" path="hardware/qcom/wlan" revision="8b94981ce47caac688d27fe222c3ce18b046e1ab" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/hardware/ril" path="hardware/ril" revision="366833ac546b94cdedcae95087d60dc1a88e57ba" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/libcore" path="libcore" revision="d5d4c9a93cf3aa799c3cb8d1467ae0cfe4af3403" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/libnativehelper" path="libnativehelper" revision="053ebae63c776d01687ce0130d0943aa7043c20a" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/BasicSmsReceiver" path="packages/apps/BasicSmsReceiver" revision="ac0dab02b55ba28a3c57c6e4b93cd093f00a6aec" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Bluetooth" path="packages/apps/Bluetooth" revision="9817eaa7e32ad043894b44d8c9a453dbbe9a39f2" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Browser2" path="packages/apps/Browser2" revision="03b380b3e143b9f75cf53f00018e1554571590a1" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Calendar" path="packages/apps/Calendar" revision="956525423e51315015d6902e3b9487e72e9f4885" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Camera2" path="packages/apps/Camera2" revision="ff5afbb9b466dd755539064ec4989ff43a8134db" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Car/Dialer" path="packages/apps/Car/Dialer" revision="420f06954be754fb7855ebdae3e01b357086c8b3" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Car/Hvac" path="packages/apps/Car/Hvac" revision="849c0aa26822983ea9a90290c34bd281cd7a5b69" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Car/LatinIME" path="packages/apps/Car/LatinIME" revision="33aaf7c717b31188d2d56543c3a52bf9e63c5d42" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Car/LensPicker" path="packages/apps/Car/LensPicker" revision="a909e7f4a5cd86cb5f4f3dd92c1f58747e5395dd" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Car/LocalMediaPlayer" path="packages/apps/Car/LocalMediaPlayer" revision="56dc94e864b6489a649483808649b4d5ad8ae0fb" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Car/Media" path="packages/apps/Car/Media" revision="e635970cd98709d0fbb551b6f4e7ba9cf2d5b9d4" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Car/Messenger" path="packages/apps/Car/Messenger" revision="58ba0a3f50db958e9996ba9498a1eb50ee708b10" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Car/Overview" path="packages/apps/Car/Overview" revision="1c8f3c027ea9c629f6b85151870e21ed1abad5bf" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Car/Radio" path="packages/apps/Car/Radio" revision="a29516efaf358bc97da59246c5c324347b70a92e" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Car/Settings" path="packages/apps/Car/Settings" revision="623f808e79a14895377f6a43884fc56ace71b0e0" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Car/Stream" path="packages/apps/Car/Stream" revision="23ddcfe9b1d110fa2718ecff64c59651a660944e" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Car/SystemUpdater" path="packages/apps/Car/SystemUpdater" revision="3506f3f39a1328465009ec080a741373b338bead" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Car/UserManagement" path="packages/apps/Car/UserManagement" revision="9391baedbf4ad645d7c125279a19d7a2b6b285f9" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Car/libs" path="packages/apps/Car/libs" revision="a691ee57d307ed0fba653d168c5b86eea048548d" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/CarrierConfig" path="packages/apps/CarrierConfig" revision="a82ca14553335e5b2ab7d463f63703c165c85fca" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/CellBroadcastReceiver" path="packages/apps/CellBroadcastReceiver" revision="2bc33808b8bf9d921ffbf9f437e8c605b8fb86e0" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/CertInstaller" path="packages/apps/CertInstaller" revision="f315b875ac2408aa853fc5e903d37eb4bb48262f" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Contacts" path="packages/apps/Contacts" revision="b19187f7488542ab9248f1ac6cdd0501a3bc93e3" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/DeskClock" path="packages/apps/DeskClock" revision="1f334322d4b82ca0530f1f67b77e566ed85e4b31" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/DevCamera" path="packages/apps/DevCamera" revision="90fdbf7460fbd255194455331c6a38a7b8f41dd2" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Dialer" path="packages/apps/Dialer" revision="c873824b2a0fe3a3a8ec7232385641fe3a346f21" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/DocumentsUI" path="packages/apps/DocumentsUI" revision="5cbb1605b6352f1fb9ed117ff7052acec8d1460e" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Email" path="packages/apps/Email" revision="cb6126c1a1a783e831b8e8e1ee49a2d819de97dc" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/EmergencyInfo" path="packages/apps/EmergencyInfo" revision="bfca44cbdca66e82efe0492bd0245db8756adf79" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/ExactCalculator" path="packages/apps/ExactCalculator" revision="56b620547c2121e82a1f29df8abc98bdb8e5c99f" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Gallery" path="packages/apps/Gallery" revision="f1ff4263517828de4901a84f9bfbc20972ba73b2" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Gallery2" path="packages/apps/Gallery2" revision="7634bbb9cde635d2907cc047c16f4f47653c4354" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/HTMLViewer" path="packages/apps/HTMLViewer" revision="e3269d171111f474c9240688c3da62e26f6a2093" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/KeyChain" path="packages/apps/KeyChain" revision="bfef754b5ba7c7d9503b7eccb4a5acc1e71c048b" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Launcher2" path="packages/apps/Launcher2" revision="29a7128376610efd9ad19d121243b2b6ded12af4" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Launcher3" path="packages/apps/Launcher3" revision="5bcb46670111a98a22d75659acefb4e430b06ec9" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/LegacyCamera" path="packages/apps/LegacyCamera" revision="f1b9921e184dda5f1c8df7a144889f39c1dac64f" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/ManagedProvisioning" path="packages/apps/ManagedProvisioning" revision="7259bc14bddf491a84748c7c91679bf902148155" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Messaging" path="packages/apps/Messaging" revision="9645dbf2f1afbb5e631f8b277cded649980831a4" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Music" path="packages/apps/Music" revision="2f387ded503c455d0307bfb67f7754a5496f617a" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/MusicFX" path="packages/apps/MusicFX" revision="96c9d71078e9fc3d42c59b8b9c984d1795b7b3f2" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Nfc" path="packages/apps/Nfc" revision="ed74cb416dd818a809b603cb825d5514feaaa453" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/OneTimeInitializer" path="packages/apps/OneTimeInitializer" revision="cdb4db6fe66377acd01ede3c735bce55c6662553" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/PackageInstaller" path="packages/apps/PackageInstaller" revision="c5b65bc9de00b841051f5c0734a81dffbd82e5f2" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/PhoneCommon" path="packages/apps/PhoneCommon" revision="4802c6da706172a3ad7f7af2fe1363da174fadbd" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Protips" path="packages/apps/Protips" revision="1e5d8a500dce6530a99cb952681889042dcfb63a" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Provision" path="packages/apps/Provision" revision="6b2548213a9c7cf93ac9dc32f8b82db4ad8e9c4d" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/QuickSearchBox" path="packages/apps/QuickSearchBox" revision="23a01d1faf34d1834d816fffe6aedbe171909e01" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/SafetyRegulatoryInfo" path="packages/apps/SafetyRegulatoryInfo" revision="df647dd103b4c7f875771f04ed9584ec8469bfc3" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Settings" path="packages/apps/Settings" revision="709ac982e6467615f33da8b09aaa654b656525d4" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/SoundRecorder" path="packages/apps/SoundRecorder" revision="ba7237540f779f1c7e67ae7a36aa7a63da8eb1c5" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/SpareParts" path="packages/apps/SpareParts" revision="f47fff0421153f4c20d155df8d0864a7036bdb06" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Stk" path="packages/apps/Stk" revision="dd5f0e9208bfab1e8ce119b28e1bbafbe7e8fc4b" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/StorageManager" path="packages/apps/StorageManager" revision="de2968cf56fb688064756173c25d670e20a3853e" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/TV" path="packages/apps/TV" revision="411c4a576a92253a386784dddb646a2671b5d6f9" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Tag" path="packages/apps/Tag" revision="9ca1b7efc724c2f66e4f29d55072df309c286cff" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Terminal" path="packages/apps/Terminal" revision="365fe89eba70d6f982e643ed49b77e9946a9166c" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/Test/connectivity" path="packages/apps/Test/connectivity" revision="881ba376eea77856097e12b1ca8fc98a6664d452" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/TimeZoneData" path="packages/apps/TimeZoneData" revision="21781efbb84145f3c931d953d15227f39fb9fc93" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/TimeZoneUpdater" path="packages/apps/TimeZoneUpdater" revision="ae8b7636bf8fb41273f2e5728299ac0d829a2ec4" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/TvSettings" path="packages/apps/TvSettings" revision="f75cc8afa2503f61dab9574cbe36a2c67f88432e" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/UnifiedEmail" path="packages/apps/UnifiedEmail" revision="93c53ffe7972841be9d0f8e896b598bc07c75ec3" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/apps/WallpaperPicker" path="packages/apps/WallpaperPicker" revision="db3426b874c2b6ad67770309b5e26291193a9ace" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/experimental" path="packages/experimental" revision="2460de484cdc9e40806f55988fd962c655e30a62" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/inputmethods/LatinIME" path="packages/inputmethods/LatinIME" revision="f71134a98f0fc8813185e0d00e6e13dd21a41a35" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/inputmethods/OpenWnn" path="packages/inputmethods/OpenWnn" revision="85ca997d8265739e94b5bd9d19460c9b87b9ec59" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/providers/ApplicationsProvider" path="packages/providers/ApplicationsProvider" revision="33d26f5eedb3d3011762ce5b2de66e931bf64b35" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/providers/BlockedNumberProvider" path="packages/providers/BlockedNumberProvider" revision="2bc46cc4fec826e35543bdeee69c02c7a87375c8" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/providers/BookmarkProvider" path="packages/providers/BookmarkProvider" revision="7b57971217bca1a43477dda1f0e958c11a3e367a" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/providers/CalendarProvider" path="packages/providers/CalendarProvider" revision="36e253b2b7c13dd8f3093e4203898c6ee5dd8415" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/providers/CallLogProvider" path="packages/providers/CallLogProvider" revision="7af14040f51f6e70a9c02ce68797325292b8a6b9" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/providers/ContactsProvider" path="packages/providers/ContactsProvider" revision="d9b7a85ca25450233c7aac4f4c62687c814d4318" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/providers/DownloadProvider" path="packages/providers/DownloadProvider" revision="a3d931820fb569c76d8471472e5961e9d95208b9" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/providers/MediaProvider" path="packages/providers/MediaProvider" revision="a42835cdd7c0454b81f6765eb782b2039adb6b1d" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/providers/PartnerBookmarksProvider" path="packages/providers/PartnerBookmarksProvider" revision="295c5634dd91013d648113b756dec98521abec00" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/providers/TelephonyProvider" path="packages/providers/TelephonyProvider" revision="81919fb8ec6036610839ad0ef59c92b2e022d29c" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/providers/TvProvider" path="packages/providers/TvProvider" revision="3446ccaec7e6ae2a2b0737faf195e96267c3f396" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/providers/UserDictionaryProvider" path="packages/providers/UserDictionaryProvider" revision="9347841ca31d1e58910a01ca811afec5ee52ba77" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/screensavers/Basic" path="packages/screensavers/Basic" revision="fac38dd22f930134e3146dbff45ca0f8bb1f7bf2" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/screensavers/PhotoTable" path="packages/screensavers/PhotoTable" revision="121c4fee774b05b62a877a1f621d5229a7ae7e82" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/screensavers/WebView" path="packages/screensavers/WebView" revision="6e0a80f6faed6191acc8ce1b6c79eada09e9e042" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/services/BuiltInPrintService" path="packages/services/BuiltInPrintService" revision="03fdbfec7eebf0b6b531f60843c0d292fd92cf2e" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/services/Car" path="packages/services/Car" revision="40ffdef40036342572382e40329fed5bc5b24f89" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/services/Mms" path="packages/services/Mms" revision="fd357f6fb2a27b0c3116f1de3a4d1d4e32d5d559" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/services/NetworkRecommendation" path="packages/services/NetworkRecommendation" revision="b9c2f130c5f876ca0490c72a366345f6f3ccaa62" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/services/Telecomm" path="packages/services/Telecomm" revision="e1bb423f86a75793d39f3956535b2d43555c863a" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/services/Telephony" path="packages/services/Telephony" revision="86d1f69c9e83aa6637176f8a3934881bea352e81" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/packages/wallpapers/LivePicker" path="packages/wallpapers/LivePicker" revision="e2572b8190808cef3bb9869383f3d87b3900a03e" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/pdk" path="pdk" revision="ae06b572170aa59182bb248a04e83d755de334da" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/platform_testing" path="platform_testing" revision="eb3f9d5ce447dbebe1bf19dffd520c8f39e95417" upstream="refs/tags/android-8.1.0_r52"/>
+  <project clone-depth="1" name="platform/prebuilts/abi-dumps/ndk" path="prebuilts/abi-dumps/ndk" revision="9b4c58b905c1c92c1b8630d9da7c96b9a92e5ddc" upstream="refs/tags/android-8.1.0_r52"/>
+  <project clone-depth="1" name="platform/prebuilts/abi-dumps/vndk" path="prebuilts/abi-dumps/vndk" revision="fad328a97046fcd7ff7288efd9e39736abcb8263" upstream="refs/tags/android-8.1.0_r52"/>
+  <project clone-depth="1" name="platform/prebuilts/build-tools" path="prebuilts/build-tools" revision="88fa20009d5581163b4656d52e2fcc1f56042da6" upstream="refs/tags/android-8.1.0_r52"/>
+  <project clone-depth="1" name="platform/prebuilts/checkcolor" path="prebuilts/checkcolor" revision="f6f661b424f646bc5ddf9e1b1e644abb492b7547" upstream="refs/tags/android-8.1.0_r52"/>
+  <project clone-depth="1" name="platform/prebuilts/checkstyle" path="prebuilts/checkstyle" revision="a8a50e922b39a2dba7e56030c660e1aabca168f3" upstream="refs/tags/android-8.1.0_r52"/>
+  <project clone-depth="1" name="platform/prebuilts/clang/host/linux-x86" path="prebuilts/clang/host/linux-x86" revision="ce80566d209ef0fba56e5bd4cc4cf11435f83a71" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/prebuilts/deqp" path="prebuilts/deqp" revision="c208ecfb707600b86a79031291bf48b220f0610e" upstream="refs/tags/android-8.1.0_r52"/>
+  <project clone-depth="1" name="platform/prebuilts/devtools" path="prebuilts/devtools" revision="2538644348d06278149f8f918930d058cb4f32a7" upstream="refs/tags/android-8.1.0_r52"/>
+  <project clone-depth="1" name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" revision="7a28c220c2e9001825328dca6188ef0077a80a88" upstream="refs/tags/android-8.1.0_r52"/>
+  <project clone-depth="1" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" revision="26e93f6af47f7bd3a9beb5c102a5f45e19bfa38a" upstream="refs/tags/android-8.1.0_r52"/>
+  <project clone-depth="1" name="platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" revision="c348b64ea1e2015a576485aa787dc70dda9ef396" upstream="refs/tags/android-8.1.0_r52"/>
+  <project clone-depth="1" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" revision="a706ab3bc2ac5168166659d6423da4b8b8e8644b" upstream="refs/tags/android-8.1.0_r52"/>
+  <project clone-depth="1" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8" path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8" revision="12eccb2e29b05b39fa83e5299b1f4486b9e743a4" upstream="refs/tags/android-8.1.0_r52"/>
+  <project clone-depth="1" name="platform/prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" path="prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" revision="e76a9a506d7ad132f107eb2f7c27b6a8ccb68b91" upstream="refs/tags/android-8.1.0_r52"/>
+  <project clone-depth="1" name="platform/prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" path="prebuilts/gcc/linux-x86/mips/mips64el-linux-android-4.9" revision="388fdc4995d374d76a0c4b292afabac91638e134" upstream="refs/tags/android-8.1.0_r52"/>
+  <project clone-depth="1" name="platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" revision="ba87ed00b06d1dbec5e68abdb9110c914ea006c6" upstream="refs/tags/android-8.1.0_r52"/>
+  <project clone-depth="1" name="platform/prebuilts/gdb/linux-x86" path="prebuilts/gdb/linux-x86" revision="4adfde8bc82dd39f59e0445588c3e599ada477d2" upstream="refs/tags/android-8.1.0_r52"/>
+  <project clone-depth="1" name="platform/prebuilts/go/linux-x86" path="prebuilts/go/linux-x86" revision="9802e351bf16f8137807da945a4bc36371a16be6" upstream="refs/tags/android-8.1.0_r52"/>
+  <project clone-depth="1" name="platform/prebuilts/gradle-plugin" path="prebuilts/gradle-plugin" revision="23dda3312e9a3127eca9c4085a41b5621bc6276d" upstream="refs/tags/android-8.1.0_r52"/>
+  <project clone-depth="1" name="platform/prebuilts/jdk/jdk8" path="prebuilts/jdk/jdk8" revision="68dabb15582c2e86c9a5ef863e193892b7843792" upstream="refs/tags/android-8.1.0_r52"/>
+  <project clone-depth="1" name="platform/prebuilts/libs/libedit" path="prebuilts/libs/libedit" revision="d32685dba4011664b590b94ad156bc734c2c9bb5" upstream="refs/tags/android-8.1.0_r52"/>
+  <project clone-depth="1" name="platform/prebuilts/maven_repo/android" path="prebuilts/maven_repo/android" revision="f0fa9b95533593f128e039cb651294d275c5a45e" upstream="refs/tags/android-8.1.0_r52"/>
+  <project clone-depth="1" name="platform/prebuilts/maven_repo/bumptech" path="prebuilts/maven_repo/bumptech" revision="268c5495b8003e09173a1ae7b1e9dc9b019e300d" upstream="refs/tags/android-8.1.0_r52"/>
+  <project clone-depth="1" name="platform/prebuilts/misc" path="prebuilts/misc" revision="598387341a7104f2bd46fca3e2c1161bce609de3" upstream="refs/tags/android-8.1.0_r52"/>
+  <project clone-depth="1" name="platform/prebuilts/ndk" path="prebuilts/ndk" revision="3c28f6818fe12e3572dcde6fcb327a4c9362acfd" upstream="refs/tags/android-8.1.0_r52"/>
+  <project clone-depth="1" name="platform/prebuilts/python/linux-x86/2.7.5" path="prebuilts/python/linux-x86/2.7.5" revision="49b50adb1a149100905b368570c2cb56cadc0854" upstream="refs/tags/android-8.1.0_r52"/>
+  <project clone-depth="1" name="platform/prebuilts/sdk" path="prebuilts/sdk" revision="8ba944d14b8e1980ed3e8a26db83fde19dc12e50" upstream="refs/tags/android-8.1.0_r52"/>
+  <project clone-depth="1" name="platform/prebuilts/tools" path="prebuilts/tools" revision="a001fcbfab0cab392f6d3a311cec27324d3dac6e" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/sdk" path="sdk" revision="f5815cfdb76e746412d6c86ba6b0675f5132bd87" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/system/bt" path="system/bt" revision="753614f69320999f417b1ed78cd030f7a9365559" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/system/ca-certificates" path="system/ca-certificates" revision="93fc85e19c5e5ac4c11f893d87a3bc5bbbac4c6d" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/system/chre" path="system/chre" revision="ee15d36625961122e50cfea5333b581ea9297e9f" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/system/connectivity/wificond" path="system/connectivity/wificond" revision="9828014fd83005fbc305c535500406612b58f287" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/system/connectivity/wifilogd" path="system/connectivity/wifilogd" revision="7f63780db20de42556d24704fabc3679569a2528" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/system/extras" path="system/extras" revision="de5a53756212bc518d2a3aa433d90e1b22efa7af" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/system/gatekeeper" path="system/gatekeeper" revision="e21a73530e490999057921c5aad86226967a71a1" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/system/hardware/interfaces" path="system/hardware/interfaces" revision="a741a1eaec60b94b00807f9e7c23729545cbd32a" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/system/hwservicemanager" path="system/hwservicemanager" revision="d8b982170b4e2e421ae5bc52813fd066bc66dd98" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/system/keymaster" path="system/keymaster" revision="a718f4c9b690fdc858c61cde00728e6b4f77989a" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/system/libfmq" path="system/libfmq" revision="46ed3ce70e84aa8fa69fb3c96592dbe13335a721" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/system/libhidl" path="system/libhidl" revision="a2617c8bb53d885cdbc9c033906faa5b1c0aa064" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/system/libhwbinder" path="system/libhwbinder" revision="88378be8a2ff7938dabc2164a20c2421304aa6d4" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/system/libufdt" path="system/libufdt" revision="58a7582180f477032cd6c74f8d9afad0038e74c3" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/system/libvintf" path="system/libvintf" revision="9db9b147602210e6ae4b40848c49a7bfeeaefcff" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/system/media" path="system/media" revision="e693a2b6551584e256ab7c87c277dcc3f601e6de" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/system/netd" path="system/netd" revision="cb160d358263b4cd5aca3d54521355a6737828a2" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/system/nvram" path="system/nvram" revision="a2cbda182e4631dc45b3e988db9a6c0a0c36a610" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/system/security" path="system/security" revision="8b84e6d77fbd69a71fb051f21eb64b597927cbb1" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/system/sepolicy" path="system/sepolicy" revision="aefde2e9bb1436b455f95b8ca0938afff74e7883" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/system/timezone" path="system/timezone" revision="863ed3ea366e2ee4b344536eb9fb508d35e66ece" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/system/tools/aidl" path="system/tools/aidl" revision="3cbb4bf3d8d7b9e99ec1d2f75aab93034bdf3f03" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/system/tools/hidl" path="system/tools/hidl" revision="12840dc2ec1cf3a3ab1277358522fe947697ba97" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/system/tpm" path="system/tpm" revision="987689803d813efb9b011236a7853c8f3edba1f6" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/system/update_engine" path="system/update_engine" revision="6f8aaf31ba5820288a6baa209c4388550b17c87e" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/test/framework" path="test/framework" revision="246492cf54d880214952e9cbb1ea490cbdd56f52" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/test/sts" path="test/sts" revision="3eba682e689d9278e339331b8e51c8f2100a99fe" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/test/vts" path="test/vts" revision="b19555a73f042d08cf528c32e6f68faba15b7dff" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/test/vts-testcase/fuzz" path="test/vts-testcase/fuzz" revision="550756ea9fbad2d457572728cb8e90cba88a7607" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/test/vts-testcase/hal" path="test/vts-testcase/hal" revision="e4534481e9d0964cfff75f9915b071dc4a147d57" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/test/vts-testcase/hal-trace" path="test/vts-testcase/hal-trace" revision="369cb6082de1479d0416737dbde6d567fb0194c2" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/test/vts-testcase/kernel" path="test/vts-testcase/kernel" revision="bd82a9ffbbad25e16b9e0c7c068a1684ee568263" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/test/vts-testcase/performance" path="test/vts-testcase/performance" revision="84070e291eee40f86e3c48439b1239a4d367ca9f" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/test/vts-testcase/security" path="test/vts-testcase/security" revision="848c88f45c929da9057afab2f4d6d084d1ee06db" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/test/vts-testcase/vndk" path="test/vts-testcase/vndk" revision="69fdb035569978319eb451e3551f3c6d71d0b78a" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/tools/apksig" path="tools/apksig" revision="1c40dc60b266ed2f4cc4247128d8feb117ad92c7" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/tools/external/fat32lib" path="tools/external/fat32lib" revision="b93883ec8d7c07817ae33ffe044ac84449066a02" upstream="refs/tags/android-8.1.0_r52"/>
+  <project clone-depth="1" name="platform/tools/external/gradle" path="tools/external/gradle" revision="a5f47b25389d24b90a7cc3a1688c8f19a837eafc" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/tools/loganalysis" path="tools/loganalysis" revision="67b8a30dfd72a155dee5d77a12755c78daaf9d9e" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/tools/repohooks" path="tools/repohooks" revision="fe49310df3a905d60ffdc123ad15f826e289e8e5" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/tools/test/connectivity" path="tools/test/connectivity" revision="581351db82f450d673c78e3d038b49c349a37997" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/tools/tradefederation" path="tools/tradefederation/core" revision="86d42d1f8ee02c3402d116a22898ac7944b48db9" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="platform/tools/tradefederation/contrib" path="tools/tradefederation/contrib" revision="8dd3029197cdaa6d9e867d4c645b489a6f9f52b6" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="release-keys" path="vendor/oss/release-keys" remote="sony" revision="3fc0cf01697b7ac667ca75047bb81af6ccc8d29d" upstream="master"/>
+  <project name="repo_update" path="vendor/oss/repo_update" remote="sony" revision="0a62d6820d5cf36b24a947a1b471bd7df8006a05" upstream="android-8.1.0_r3">
+    <linkfile dest="repo_update.sh" src="repo_update.sh"/>
+  </project>
+  <project name="thermanager" path="vendor/oss/thermanager" remote="sony" revision="87297db29b81ae9dedb386f75db8457e871a5a59" upstream="master"/>
+  <project name="timekeep" path="vendor/oss/timekeep" remote="sony" revision="20d51146bf3668e570166b8c6165887736cfe276" upstream="master"/>
+  <project name="toolchain/binutils" revision="a4125cf8aeab9dfeac00f1bda80645987897152f" upstream="refs/tags/android-8.1.0_r52"/>
+  <project name="transpower" path="vendor/oss/transpower" remote="sony" revision="47700dfca36b1b3d69708b5288b5a18059d7922d" upstream="android-8.1.0_r35"/>
+  <project name="vendor-broadcom-bt-fm" path="vendor/broadcom/bt-fm" remote="sony" revision="2da2991694277c0e29782fbadffe69027adeb09a" upstream="master"/>
+  <project name="vendor-broadcom-wlan" path="vendor/broadcom/wlan" remote="sony" revision="886f908cd0c045f7e8bda2af7dd22067d5e82d70" upstream="master"/>
+  <project name="vendor-nxp" path="vendor/nxp/" remote="sony" revision="b1e4fc83b8b9fb16db08d3df2af02a4ac3d8ad27" upstream="master"/>
+  <project name="vendor-qcom-opensource-dataservices" path="vendor/qcom/opensource/dataservices" remote="sony" revision="844ec759a864af521da576748ed309d9e954979a" upstream="master"/>
+  <project name="vendor-qcom-opensource-fm" path="vendor/qcom/opensource/fm" remote="sony" revision="aabbad189c592aa67facec37bb4d52eb5f991738" upstream="master"/>
+  <project name="vendor-qcom-opensource-interfaces" path="vendor/qcom/opensource/interfaces" remote="sony" revision="a15cacb6f506f2845f00d55391379d56c455cbb9" upstream="aosp/LA.UM.6.3.r1">
+    <copyfile dest="vendor/qcom/opensource/Android.bp" src="os_pickup.bp"/>
+  </project>
+  <project name="vendor-qcom-opensource-location" path="vendor/qcom/opensource/location" remote="sony" revision="43af668f4802a26220b17393635a637a857af0fa" upstream="o-mr1"/>
+  <project name="vendor-sony-oss-cash" path="vendor/oss/cash" remote="sony" revision="65d04f688a41599821f9d33a080509784b24e1de" upstream="master"/>
+  <project name="vendor-sony-oss-fingerprint" path="vendor/oss/fingerprint" remote="sony" revision="82a274e02032cf4260c142490ea486e56cc98aa6" upstream="master"/>
+  <project name="vendor-sony-oss-projection" path="vendor/oss/projection" remote="sony" revision="ea763867a7fa1b859d310d08fac4fd4763f0b39a" upstream="master"/>
+  
+  <repo-hooks enabled-list="pre-upload" in-project="platform/tools/repohooks"/>
+</manifest>

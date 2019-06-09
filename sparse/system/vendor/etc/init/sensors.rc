@@ -1,0 +1,35 @@
+on post-fs-data
+    # Sensors
+    mkdir /data/vendor/sensors 0775 system system
+
+    # LEGACY: Sensors
+    mkdir /data/misc/sensors 0775 system system
+
+    # Fix sensors permissions
+    chown system system /persist/sensors
+
+    # remove deprecated .reg
+    rm /persist/sensors/sns.reg
+
+    # /dev/sensors only supports an ioctl to get the current SLPI timestamp;
+    # allow the sensors daemon to perform this as non-root
+    chown root system /dev/sensors
+    chmod 660 /dev/sensors
+
+# Sensor service
+service sensors /odm/bin/sensors.qcom
+    class late_start
+    user system
+    group system
+
+# Start the service for unecrypted devices
+on property:ro.crypto.state=unencrypted
+    enable sensors
+
+# Enable the service for FBE devices
+on property:ro.crypto.type=file
+    enable sensors
+
+# Start the service for FDE devices
+on property:vold.decrypt=trigger_post_fs_data
+    start sensors
